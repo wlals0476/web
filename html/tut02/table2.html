@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .table-wrap {
+            /* width: 1500px; */
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        tr {
+            height: 80px;
+        }
+
+        tr:nth-child(1) {
+            background-color: #000;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        /* 마지막 합계만 굵게 수정할 때 */
+        tr:last-child {
+            font-weight: 700;
+            background-color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <table>
+    <div class="table-wrap">
+        <tr>
+            <th>Date.</th>
+            <th>Order ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td rowspan="3">2023.05.20</td>
+            <td>Korea3</td>
+            <td>코리아아이티3</td>
+            <td>50000</td>
+            <td>50</td>
+            <td>2500000</td>
+        </tr>
+        <tr>
+            <td>Korea3</td>
+            <td>코리아아이티3</td>
+            <td>50000</td>
+            <td>50</td>
+            <td>2500000</td>
+        </tr>
+        <tr>
+            <td>Korea3</td>
+            <td>코리아아이티3</td>
+            <td>50000</td>
+            <td>50</td>
+            <td>2500000</td>
+        </tr>
+        <tr>
+            <td colspan="3">합계</td>
+            <td>150000</td>
+            <td>500000</td>
+            <td>1000000</td>
+        </tr>
+    </div>
+    </table> 
+</body>
+</html>

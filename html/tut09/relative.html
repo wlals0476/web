@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative 상대좌표</title>
+    <style>
+       .one {
+        background-color: #ccc;
+        width: 800px;
+        height: 500px;
+
+        position: absolute;
+        right: 300px;
+        top: 100px;
+       }
+
+       .two {
+        background-color: #00f;
+        width: 600px;
+        height: 300px;
+        position: relative;
+       }
+       
+       .three {
+        background-color: #f00;
+        width: 200px;
+        height: 100px;
+
+        position: absolute;
+        bottom: 0;
+        right: 0;   
+       }
+    </style>
+</head>
+<body>
+   <div class="one">
+    <div class="two">
+        <div class="three">Relative</div>
+    </div>
+   </div>
+</body>
+</html>

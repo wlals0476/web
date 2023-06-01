@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position : (절대,상대)위치에 따른 배치(좌표)</title>
+    <style>
+        /* position : top, left, (right, buttom) */
+        .box1 {
+            width: 500px;
+            height: 500px;
+            background-color: #f00;
+            position: absolute;
+            /* 마이너스 값은 브라우저 숨김 */
+            /* left: -300px;
+            top: -300px; */
+
+            /* 브라우저에 상관없이 위에서 50% 띄우기 : px쓰면 X => % 써야 함 */
+            /* 기준은 왼쪽 위 모서리를 기준으로 정렬 */
+            top: 50%;
+            left: 50%;
+
+            /* 박스 크기의 가로 반, 세로 반을 왼쪽, 위로 이동 */
+            transform: translate(-50%, -50%);
+
+            /* left: 300px;
+            top: 30px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    1. 절대 : 브라우저 body 부분의 왼쪽 위 모서리를 기준
+    2. 상대 : 부모 사각형이 왼쪽 위 모서리를 기준 
+    -->
+
+    <div class="box1">Absolute(절대좌표)</div>
+</body>
+</html>

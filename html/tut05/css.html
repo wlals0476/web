@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- 1.외부 스타일 시트(별도의 파일로 작업) : reset.css
+    2.내부 스타일 시트(<style></style>) : 일반 디자인
+    3.html 태그 안에 스타일(inline style sheet) : 특정한 곳을 디자인 
+    -->
+    <style>
+        .box {
+            width: 500px;
+            height: 400px;
+        }
+
+        /* .clr1 {
+            background-color:pink;
+        }
+
+        .clr2 {
+            background-color:ivory;
+        } */
+
+        #title {
+            background-color: yellow;
+        }
+
+        .title {
+            background-color: aquamarine;
+        }
+
+        h1 {
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+   <div class="box clr1 kor" style="background-color: pink;">box1</div>
+   <div class="box clr2 eng" style="background-color: ivory;">box2</div> 
+
+   <!-- id 이름이 중복되면 X -->
+   <h1 id="title">제목1</h1>
+
+   <!-- 중복가능 -->
+   <!-- 반복문을 써야 한다면 id 아닌 곳 class 같은 곳에 for()를 사용 -->
+   <h1 class="title">제목2</h1>
+   <h1>제목3</h1>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From 예제1</title>
+</head>
+<body>
+   <!-- html -->
+    <form method="post" name="frm" action="https://naver.com" onsubmit="return loginCheck()">
+        <label>Userid</label>
+        <input type="text" name="userid" id="userid" class= "userid" placeholder="아이디를 입력해 주세요"><br />
+        <label>password</label>
+        <input type="password" name="passwd" id="passwd" class= "passwd" passwd" placeholder="비밀번호를 입력해 주세요"><br />
+        <input type="submit" name="sbt" value="Login" /><br />
+        <input type="checkbox" checked /> 아이디저장
+    </form>
+
+   <!-- javascript -->
+   <script>
+        /*
+        submit - enter도 가능
+        button(click) : 클릭
+        
+        get : 검색(정보가 보여도 상관없이 x) : 글자수 제한
+        post : 로그인, 회원가입(보안) : 전송 글자수 제한 x
+        */
+       
+        // var userid = document.getElementById("userid");
+        // var passwd = document.getElementById("passwd");
+
+        // var uid = document.getElementsByClassName("userid");
+        // var pwd = document.getElementsByClassName("passwd");
+
+        // //queryselector
+        // //id
+        // let id = document.querySelector("#userid")
+        // let id = document.querySelector(".userid")
+        // let id = document.querySelector("input")
+        //----------------------------------------------------------
+    /*
+        function loginCheck() {
+            if(document.frm.userid.value == "") {
+                alert("아이디를 넣어 주세요.");
+                document.frm.userid.focus();
+                return false; /'아직 다음이 남아 있습니다'란 뜻
+            }
+
+            if(document.frm.passwd.value == "") {
+                alert("비밀번호를 입력해 주세요.");
+                document.frm.passwd.focus();
+                return false;
+            }
+
+            alert("로그인 페이지로 이동합니다.");
+        }
+        */
+   </script>
+</body>
+</html>

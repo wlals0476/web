@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Template Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Libre+Franklin&family=Pacifico&display=swap');
+
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       a {
+        text-decoration: none;
+        color: #222;
+       }
+
+       ul li {
+        list-style: none;
+       }
+
+       /* ------------------------------------------------------------------------ */
+
+       body {
+        font-family: 'Libre Franklin', sans-serif;
+       }
+
+       nav {
+        width: 100%;
+        height: 90px;
+        border-bottom: 1px solid #e7e7e7;
+       }
+
+       .hero {
+        background-image: url('../tut03/images/p5.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 800px;
+       }
+
+       .nav-wrap {
+        /*background-color: #f00; */
+        width: 1200px;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+        /* nav 높이와 같이 줘야 세로 정렬이 됨 */
+        align-items: center;
+        height: 90px;
+        
+        }
+
+       .logo {
+        font-family: 'Pacifico', cursive;
+        font-size: 35px;
+        font-weight: bold;
+       }
+
+       .menu ul {
+        display: flex;
+       }
+
+       .menu ul li a {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-family: 'Lato', sans-serif;
+        margin-right: 30px;
+        color: #999;
+        font-weight: 500;
+       }
+
+       .menu ul li a.active {
+            color: tomato;
+       }
+
+       .hero-wrap {
+        width: 1200px;
+        margin: 0 auto;
+        /* 높이 값이 항상 존재를 해야 세로 정렬이 가능 */
+        display: flex;
+        align-items: center;
+        height: 800px;
+       
+       }
+
+       .hero-text {
+        /* background-color: rgba(255, 255, 255, 0.7); */
+        width: 500px;
+       
+       }
+
+       .hero-text h6 {
+        color: tomato;
+        letter-spacing: 3px;
+       }
+
+       .hero-text h1 {
+        margin: 15px 0;
+        font-size: 50px;
+        
+       }
+
+       .hero-text p {
+        /* color: #333; */
+        color: rgba(0,0,0,0.6);
+       }
+
+       .hero-btn {
+        text-transform: uppercase;
+        font-size: 12px;
+        background-color: #ac1313;
+        padding: 20px 30px;
+        color: #fff;
+        cursor: pointer;
+        border: 0;
+        margin-top: 40px;
+       }
+
+       .hero-btn:hover {
+            background-color: #000;
+            transition: 0.3s;
+            
+       }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <nav>
+                <div class="nav-wrap">
+                    <div class="logo">Pompeo</div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="" class="active">Home</a></li>
+                            <li><a href="">About</a></li>
+                            <li><a href="">Shop</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Cart</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero">
+                <div class="hero-wrap">
+                    <div class="hero-text">
+                        <h6>POMPEO POTTERY</h6>
+                        <h1>Unique Porcelain &<br /> Stone Collection</h1>
+                        <p>Unique & modern pottery made by our master in porcelain & stones</p>
+                        <div class="btn-warp">
+                            <button class="hero-btn">shop collection</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </header>
+        <!-- <main>
+            
+            <select class="one">본문1</select>
+            <select class="two">본문2</select>
+            <select class="three">본문3</select>
+            <select class="four">본문4</select>
+            <select class="five">본문5</select>
+        </main> -->
+        <!-- <footer>카피라이터</footer> -->
+    </div>
+</body>
+</html>
