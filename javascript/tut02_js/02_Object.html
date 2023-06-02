@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //객체 : let 이름 = {}
+        //배열 : let 이름 = [{객체1}, {객체2}]
+
+        let member = {
+            id: 1,
+            userid: 'koreait',
+            passwd: '1234'
+        };
+        console.log("------객체 각각 출력------");
+        console.log(member.id);
+        console.log(member["userid"]);
+        console.log("--------객체 반복문(for in)으로 출력--------");
+        /*
+        for(별명 in 객체명) {
+            console.log(객체명[별명]);
+        }
+        */
+
+        for(key in member) {
+            //console.log(member[key]);
+            console.log(`${key} - ${member[key]}`);
+        }
+
+        let members = [
+            {
+                id: 3,
+                userid: 'Daegu',
+                passwd: '0000'
+            },
+
+            {
+                id: 2,
+                userid: 'Busan',
+                passwd: '9876'
+            },
+
+            {
+                id: 1,
+                userid: 'Seoul',
+                passwd: '0000'
+            }
+        ];
+
+        //자바스크립트 객체
+        console.log(members);
+
+        // 자바스크립트 -> Json(통신)
+        //송신 : Json.stringify(배열명) -> 데이터 전송 -> 수신 : Json.parse(배열명)
+        console.log(JSON.stringify(members));
+
+        //배열 분해 각각의 요소
+        /* 배열명.forEach((별명) => {
+            출력코드
+        }); */
+
+        members.forEach((el) => {
+            console.log(el);
+        });
+
+        console.log("");
+
+        members.forEach((val, key) => {
+            console.log(`${key}는 ${val.userid}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button onclick="함수명()">Click Me</button> -->
+
+    <button class="button" id="button">Click Me</button>
+    <script>
+        //click Event 처리 : 함수 분리, function함수, 화살표함수
+        //동작 + 클릭이벤트
+
+        //동작
+        function chkButton(e) {
+            e.preventDefault(); // 버튼이 가지고 있는 기본 속성을 제거
+            alert('버튼이 클릭되었습니다.');
+            // location.href = "https://www.naver.com";
+        }
+
+        // let btn = document.querySelector("button");
+        // let btn = document.querySelector(".button");
+        let btn = document.querySelector("#button");
+        btn.addEventListener('click', chkButton); // () x
+    </script>
+</body>
+</html>

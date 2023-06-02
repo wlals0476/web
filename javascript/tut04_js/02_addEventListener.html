@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">Click Me1</button>
+    <button class="btn2">Click Me2</button>
+    <button id="btn3">Click Me3</button>
+
+
+    <script>
+        //내부함수, 내부 화살표 함수에는 함수 이름 x
+       
+        let btn1 = document.querySelector('.btn1');
+        btn1.addEventListener('click',  function () {
+            alert("Button1이 클릭되었습니다.");
+        });
+
+        let btn2 = document.querySelector(".btn2");
+        btn2.addEventListener('click', () => {
+            alert("Button1이 클릭되었습니다.");
+        });
+              
+       let btn3 = document.querySelector('#btn3');
+       btn3.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert("확인");
+       });
+    </script>
+</body>
+</html>
