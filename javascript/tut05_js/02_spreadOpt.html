@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. 이어 붙이기
+        //2. 정확한 개수를 모를 때
+
+        //2수의 합계
+        //동작
+        let sum = function(num1, num2) {
+            return num1 + num2;
+        }
+
+        //출력
+        console.log(sum(100, 200));
+
+        //정확한 개수를 모를 때 합계 : 매개변수 개수는 상관없이 더하기(...붙이면 됨)
+        let add = function (...values) { //배열처럼 사용
+            let total = 0;
+            for(let i = 0; i < values.length; ++i) {
+                total += values[i];
+            }
+            return total;
+        }
+        console.log(add(100, 200));
+        console.log(add(100, 200, 300));
+
+        console.log("----------------------");
+
+        let cals = (...numbers) => {
+
+            let sum = 0;
+
+            //for(let 별명 of 배열명) {출력코드}
+            for(let number of numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        console.log(cals(1,2,3));
+        console.log(cals(1,2,3,4,5));
+
+    </script>
+</body>
+</html>

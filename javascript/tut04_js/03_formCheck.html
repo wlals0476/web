@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form html -->
+    <!-- 입력테이터 서버(웹서버(apache, tomcat, IIS) : localhost:포트번호)로 전송(name) -->
+    <!-- 스프링에서 전송 데이터를 db 저장 or Json으로 변환해서 프론트엔드 프로그램으로 전송 -->
+    <!-- 필드명 form name 똑같이 맞추면 오류 x -->
+
+    <!-- 보안상 감춰야 하거나 또는 전송 데이터가 길 때 -->
+    <form method="post">
+        <label>Userid.</label>
+        <input type="text" name="userid" class="userid" autofocus /><br />
+
+        <label>Password.</label>
+        <input type="password" name="passwd" class="passwd" /><br />
+
+        <!-- 라디오 버튼 : 이름이 동일 -> 배열 => 반복문 필요 : forEach -->
+        <label>성별</label>
+        <input type="radio" name="gender" value="남자" /> 남자        
+        <input type="radio" name="gender" value="여자" checked /> 여자<br />
+
+        <!-- <input type="submit" value="회원가입" /> -->
+        <button>Register</button>
+    </form>
+
+    <!-- script -->
+    <script>
+        let userid = document.querySelector(".userid");
+        // document.querySelector("input[type='text']");
+        // document.querySelector("input[name='userid']");
+
+        let passwd = document.querySelector(".passwd");
+        // document.querySelector("input[type='password']");
+        // document.querySelector("input[name='passwd']");
+
+        let btn = document.querySelector("button");
+
+        //동작
+        function frmCheck(e) {
+            e.preventDefault();
+            if(userid.value == "") {
+                alert("아이디를 입력해 주세요.");
+                userid.focus();
+                return; 
+            }
+
+            // 아이디는 8자리 이상이면 예외
+            if(userid.value.length > 8) {
+                alert("아이디 길이가 너무 깁니다\n다시 입력해 주세요.");
+                userid.value = "";
+                userid.focus();
+                return;
+            }
+
+            // RegExp : 정규식(아이디는 영어로 시작... 이메일은 @)
+
+            if( !passwd.value ) {
+                alert("비밀번호를 입력해 주세요.");
+                passwd.focus();
+                return;
+            }
+
+            //체크된 값을 표시
+            /*
+            배열명.forEach((별명)) => {
+                console.log(el.);
+            });*/
+            // 여러 개 이름을 가져올 때는 document.querySelector("개체명");
+            // 라디오 버튼, 체크 박스(boolean 타입)는 선택이 되면
+            // .checked = true => .checked
+
+            //1개 querySelector();
+            //이름은 같은 개체를 배열로 처리할 때는 querySelectAll();
+
+            let gender = document.querySelectorAll("input[name='gender']");
+
+            gender.forEach( (g) => {
+                if(g.checked) {
+                    console.log(g.value);
+                }
+            });
+
+            
+            // document.querySelector("input[name='gender']").value;
+            // document.querySelector("input[name='gender']").length;
+
+            // // 라디오 버튼이 선택한 값을 출력
+            // console.log(document.querySelector("input[name='gender']").value);
+
+            // // gender 라디오 버튼의 길이
+            // console.log(document.querySelector("input[name='gender']").value.length);
+
+        }
+
+        //이벤트       
+        btn.addEventListener('click', frmCheck);
+    </script>
+</body>
+</html>
