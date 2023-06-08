@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>목록추가</button>
+    <p>Java</p>
+    <p>Database</p>
+
+    <script>
+        let btn = document.querySelector("button");
+
+        function addPrag() {
+            let newEl = document.createElement("p");
+            let newTxt = document.createTextNode("Spring Boot");
+            newEl.appendChild(newTxt);
+            document.body.appendChild(newEl);
+        }
+        btn.addEventListener('click', addPrag);
+
+        /*
+        1. 붙일 속성 가져오기 : document.createElement();
+        2. 붙일 속성의 글자 : document.createTextNode();
+        3. 이어붙이기 : document.createElement().appendChild();
+        4. 표시하기  :document.body.appendChild()
+        */
+    </script>
+</body>
+</html>

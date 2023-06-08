@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 객체이름.classList.add("클래스명") : css 클래스 추가하기
+           객체이름.classList.remove("클래스명") : css 클래스 제거하기
+        */
+        
+        .textClose{
+            /* 공간은 남겨 두고 숨기기 */
+            visibility: hidden;
+
+            /* 공간도 없애면서 숨기기 */
+            /* display: none; */
+        }
+    </style>
+</head>
+<body>
+    <h1>코리아아이티 아카데미</h1>
+    <button class="view">보기</button>
+    <button class="close">닫기</button>
+
+    <script>
+        let title = document.querySelector("h1");
+        let viewBtn = document.querySelector(".view");
+        let closeBtn = document.querySelector(".close");
+
+        viewBtn.onclick = function() {
+            title.classList.remove("textClose");
+        }
+
+        closeBtn.onclick = function() {
+            title.classList.add("textClose");
+        }
+    </script>
+</body>
+</html>

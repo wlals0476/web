@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- html, css, img 조작 + ajax(새로고침X, 데이터를 가져오기, 부분만 새로고침) -->
+    <!-- 이미지 정보 출력하기 -->
+    <img src="images/d1.jpg" alt="빌게이츠1" title="빌게이츠 증명사진 1" style="width: 300px;">
+    <button class="imgBtn">이미지바꾸기</button>
+
+    <script>
+        let img = document.querySelector("img");
+        let imgBtn = document.querySelector(".imgBtn");
+        
+        //onclick
+        // imgBtn.onclick = function() {
+        //     img.src = "images/d2.jpg";            
+        // }
+
+        //addEventListener
+        function imgChange() {
+           img.src = "images/d2.jpg";
+        }
+
+        // imgBtn.addEventListener("click", imgChange);
+        
+        // imgBtn.addEventListener("click", function imgChange() {
+        //    img.src = "images/d2.jpg";
+        // });
+
+        imgBtn.addEventListener("click", () => {
+           img.src = "images/d2.jpg";
+        });
+
+        // console.log(img.src);
+        // console.log(img.alt);
+    </script>
+</body>
+</html>
