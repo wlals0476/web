@@ -1,0 +1,26 @@
+[
+    {
+        "kor_buseo_code" : "100",
+        "kor_buseo_name" : "Human Resource Dept"
+    },
+
+    {
+        "kor_buseo_code" : "200",
+        "kor_buseo_name" : "Secretary Office"
+    },
+
+    {
+        "kor_buseo_code" : "300",
+        "kor_buseo_name" : "Sales Dept"
+    },
+
+    {
+        "kor_buseo_code" : "900",
+        "kor_buseo_name" : "Executive Office"
+    },
+
+    {
+        "kor_buseo_code" : "000",
+        "kor_buseo_name" : "Korea it"
+    }
+]

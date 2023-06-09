@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label>select html 형식</label>
+        <select id="sel1">
+            <option value="100">Human Resource Dept</option>
+            <option value="200">Secretary Office</option>
+            <option value="300">Sales Dept</option>
+            <option value="900">Executive Office</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Ajax + Json 파일</label>
+        <select id="sel2"></select>
+    </div>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.open('get', 'buseo.json', true);
+        xhr.send(); //요청
+
+        xhr.onload = function() {
+            //전송방식, 주소(파일)이 정상적으로 전송할 준비가 되었다면...
+            if(xhr.readyState === 4 && xhr.status === 200) {
+                let result = JSON.parse(xhr.responseText);
+                
+                htmlRender(result);
+            }
+        }
+
+        function htmlRender(result) {
+            let output = "";
+                result.forEach( (r) => {//4개가 나와야함
+                   output += `<option value=${r.kor_buseo_code}>${r.kor_buseo_name}</option>`;
+                });
+                
+                document.querySelector("#sel2").innerHTML = output;
+        }
+
+
+    </script>
+</body>
+</html>
