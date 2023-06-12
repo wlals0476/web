@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 예제</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead tr, tbody tr {
+            height: 50px;
+        }
+
+        thead th {
+            background-color: #9bd6f8;
+        }
+        
+        th, td {
+            border: 1px solid #000;
+        }
+
+        .pagination {
+            padding: 20xp 0;
+            text-align: right;
+        }
+
+        .search-wrap {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-wrap">
+        <form method="post" action="/board/search">
+            <input type="search" required> <button>검색</button>
+        </form>        
+    </div>    
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>게시판 디자인 테스트</td>
+                <td>관리자</td>
+                <td>2023.06.12</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>게시판 디자인 테스트</td>
+                <td>관리자</td>
+                <td>2023.06.12</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>게시판 디자인 테스트</td>
+                <td>관리자</td>
+                <td>2023.06.12</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>게시판 디자인 테스트</td>
+                <td>관리자</td>
+                <td>2023.06.12</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>게시판 디자인 테스트</td>
+                <td>관리자</td>
+                <td>2023.06.12</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+        <!-- <tfooter>
+            <tr>
+                <td colspan="5">
+                    <span>
+                        prev
+                    </span>
+
+                    <span>1</span>
+
+                    <span>next</span>
+                </td>                
+            </tr>
+        </tfooter> -->
+    </table>
+    <div class="pagination">
+        <span>Prev</span>
+
+        <span>1</span>
+        
+        <span>Next</span>
+    </div>
+</body>
+</html>
