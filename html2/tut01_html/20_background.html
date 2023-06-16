@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .hero {
+            max-width: 100%;
+            height: 900px;
+            background-image: url(images/a14.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: center;           
+        }
+
+        .hero-area {
+            max-width: 1200px;
+            margin: 0 auto;            
+            display: flex;
+            align-items: center;
+            height: 700px;      
+        }
+
+        .hero-content {
+            width: 400px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            padding: 30px;
+        }
+
+        .btn-wrap {
+            text-align: right;
+        }
+
+        .btn-wrap button {
+            background-color: transparent;
+            border: 1px solid #5e5b5b;
+            padding: 4px 8px;
+        }
+
+        .btn-wrap button:hover {
+            background-color: white;
+            border: 1px solid #5e5b5b;
+            padding: 4px 8px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width:1000px) {
+            .hero-content {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            padding: 30px;
+            margin: 0 20px;
+        }
+
+        .btn-wrap {
+            text-align: center;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-area">
+            <div class="hero-content">
+                <h1>Serving you<br />since 1989</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque adipisci consectetur sequi enim commodi fugit quibusdam nulla voluptas laborum in.</p>
+                <div class="btn-wrap">
+                    <a href="https://www.naver.com" target="_blank">
+                        <button>SHOP Merch</button>
+                    </a>                    
+                </div>
+            </div>           
+        </div>
+    </div>
+</body>
+</html>

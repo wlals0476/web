@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 메인 페이지</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            padding: 150px 0;
+        }
+
+        main:nth-child(odd) {
+            background-color: #f8f8f8;
+        }
+
+        section {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .one {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .one article {
+            flex-basis: 48%;
+        }
+
+        .one h1 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .one p {
+            text-align: justify;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.7);
+            font-size: 20px;
+        }
+
+        .one img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .two {
+            display: flex;
+            
+            /* 사진 합계 사이즈가 브라우저보다 커지면 줄바꿈 */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .title {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .box {
+            flex-basis: 24.75%;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 1200px) {
+
+            main {
+            padding: 70px 0;
+            }
+            .one article {
+            flex-basis: 100%;
+            }
+
+            .one h1 {
+            text-align: center;
+            }
+
+            .box {
+            flex-basis: 49.3%;
+            }
+        }
+
+        @media screen and (max-width: 765px) {
+
+            main {
+            padding: 35px 0;
+            }
+
+            .box {
+            flex-basis: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- main > section > article -->
+    <main>
+        <section class="one">
+            <article>
+                <h1>KOREAIT ACADEMY</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quos dicta excepturi provident illo id iusto repudiandae exercitationem numquam accusantium quae vel earum suscipit tenetur fugit, unde veritatis voluptate dolorem saepe nihil nam! Incidunt, obcaecati, eos sint quaerat maxime eaque dolore, praesentium aliquam distinctio eveniet nisi odit quis vero. Dicta ducimus magnam commodi doloremque quo. Totam fugiat molestiae et nihil natus necessitatibus asperiores nam qui tenetur, vel ut explicabo doloribus similique eligendi voluptatibus sequi temporibus a voluptatum, nisi obcaecati, voluptas facere ea quod! Sit alias ut dolorem repellendus totam repellat quae? Exercitationem doloremque, tempore error beatae recusandae aut possimus fugiat, quis esse earum odio! Beatae molestiae sed voluptatibus impedit obcaecati. Ducimus corrupti rem voluptatem consequatur sit numquam dignissimos suscipit beatae vero unde, asperiores ullam culpa atque. Similique consequatur maxime qui eaque, at minima ut laboriosam voluptatem natus illum sit maiores aliquid eos delectus odio vel eum laborum, porro ad sint veniam! Repellat velit excepturi enim expedita ea. Obcaecati, maiores deserunt facilis doloribus minima veritatis earum optio, quos impedit repellendus, labore praesentium fugit dolore saepe amet incidunt quae. Qui numquam maxime alias similique voluptate doloremque sed perspiciatis architecto sit, adipisci magni quaerat nam debitis? Hic officiis fugiat perspiciatis distinctio laboriosam, eum minima velit reiciendis dolorem saepe vitae reprehenderit error repellat minus quo fugit nostrum sed ipsum quisquam autem sint doloremque harum tempore ipsa! Dolorum, voluptas harum alias amet similique repellat. Minus!</p>
+            </article>
+            <article>
+                <img src="images/a1.jpg" alt="">
+            </article>
+        </section>
+    </main>
+
+    <main>
+        <section class="">
+            <div class="title">
+                <h1>KOREAIT ACADEMY</h1>
+            </div>
+
+            <div class="content two">
+                <article class="box">
+                    <img src="images/a2.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a3.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a4.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a5.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a6.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a7.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a9.jpg" alt="">
+                </article>
+                <article class="box">
+                    <img src="images/a13.jpg" alt="">
+                </article>
+            </div>            
+        </section>
+    </main>
+</body>
+</html>

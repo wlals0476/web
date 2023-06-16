@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- #이름 : id 선택자 : 중복되는 이름 X 
+    중복되는 이름 있어도 상관 X 
+    .이름 : class 선택자
+    tag이용해서 : Tag 선택자 -->
+    
+    <form onsubmit="return sel()">
+        <label>아이디</label>
+        <input id="userid" /><br />
+
+        <label>아이디</label>
+        <input class="userid" /><br />
+
+        <label>아이디</label>
+        <input type="text" /><br />
+
+        <label>아이디</label>
+        <input name="userid" /><br />
+
+        <input type="submit" value="회원가입" />
+    </form>
+
+    <script>
+        function sel() {
+            //id selector #
+            //alert(document.querySelector("#userid").value);
+
+            //class selector
+            //alert(document.querySelector(".userid").value);
+
+            //tag type
+            //alert(document.querySelector("input[type='text']").value);
+
+            //name
+            alert(document.querySelector("input[name='userid']").value);
+        }
+    </script>
+</body>
+</html>
