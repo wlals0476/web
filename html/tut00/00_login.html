@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea it Groupsystem Login page</title>
+    <style>
+        /* 폰트, 색상.... 디자인 작업 임의로 */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eee;
+        }
+
+        .login-box {
+            background-color: #fff;
+            width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 2px 2px 2px #888888;
+
+            padding: 60px 40px;
+            border-radius: 3px;
+        }
+
+        .login-box section {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .login-box section h1 {
+            font-size: 40px;
+        }
+
+        .login-box section h2 {
+            font-size: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width:150px;
+        }
+
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        input {
+            width: 100%;
+            border: 1px solid #c7c7c7;
+            padding: 16px 8px;
+            outline: 0;
+        }
+
+        input:focus {
+            border: 1px solid #ff0000;
+        }
+
+        button {
+            background-color: #6e6b6b;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            padding: 16px 0;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            border: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+    <div class="login-box">
+        <!-- 내용은 화면을 참조 -->
+        <section>
+            <h1></h1>
+            
+        </section>
+        <form method="post" name="frm" action="#" onsubmit="return loginCheck()" autocomplete="off">
+            <label>Userid</label>
+            <input type="text" name="userid" class="userid" id="userid" placeholder="아이디"/><br />  
+            <label>Password</label>
+            <input type="password" name="password" class="password" id="password" placeholder= "비밀번호" /><br />    
+            <button class="btn">Login</button>            
+        </form>
+    </div>
+    </main>
+    <script>
+        function loginCheck() {
+        if(document.frm.userid.value == "") {
+        alert("아이디를 입력해 주세요.");
+        document.frm.userid.focus();
+        return false; 
+    }
+
+    if(document.frm.passwd.value == "") {
+        alert("비밀번호를 입력해 주세요.");
+        document.frm.passwd.focus();
+        return false;
+    }
+    alert("로그인 페이지로 이동합니다.");
+}
+    </script> 
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event HTML5 - Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        /* header */
+
+        .header-top-size {
+            width: 1600px;
+            margin: 0 auto;
+        }
+
+        a.active {
+            background-color: #060018;
+            color: #fff !important;
+            padding: 15px 20px;
+        }
+        
+        /* main */
+        main section {
+            padding: 150px 0;
+        }
+
+        main section:nth-child(even) {
+            background-color: #060018;
+        }
+
+        .one-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .one-wrap div {
+            flex-basis: 48%;           
+        }
+
+        .one-size .three-size {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .one-size .one-left h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .one-size .one-left p {
+            text-align: justify;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .header-bottom {
+            width: 100%;
+            height: 800px;
+            background-image: url('/images/q1.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header-size {
+            width: 1400px;
+            height: 800px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-top-wrap {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+        .header-top-wrap h1 {
+            line-height: 100px;
+        }
+
+        .nav ul {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 100px;
+        }
+
+        .nav ul li {
+            margin-left: 80px;
+        }
+
+        .nav ul li a {
+            color: #000;
+        }
+
+        .header-screen {
+            background-color: rgba(6, 0, 24, 0.7);
+            width: 100%;
+            height: 800px;
+        }
+
+        .header-content {
+            color: #fff;
+        }
+
+        .header-content h5 {
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header-content h1 {
+            font-size: 70px;
+            letter-spacing: 2px;
+        }
+
+        .header-content .btn-wrap {
+            margin-top: 40px;
+        }
+        
+        .header-content .btn-wrap button {
+            background-color: #fff;
+            color:#060018;
+            border: 0;
+            padding: 20px 24px;
+            font-size: 18px;
+        }
+
+        .one-wrap {
+            width : 1400px;
+            margin : 0 auto;
+        }
+
+        .one-left-icons {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+
+        .one-left-icons div {
+            flex-basis: 45%;
+        }
+
+        .one-left-icons i {
+            font-size: 40px;
+        }
+
+        .one-left-btn button {
+            background-color: #060018;
+            color:#fff;
+            border: 0;
+            padding: 16px 28px;
+            font-size: 16px;
+        }
+
+        .one-right-img img {
+            width: 100%;
+            /* 반응형 줄 때는 높이를 줘야 함 */
+            /* height: 100%; */
+        }       
+
+        .one-wrap .clrs {
+            color: #fff !important;
+        }
+
+        .one-wrap .bg-clrs {
+            background-color: #fff !important;
+            color: #000 !important;
+        }
+
+        .one-two-people {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .one-two-people div {
+            flex-basis: 48%;
+        }
+
+        .one-two-peolpe img {
+            width: 100%;
+            /* 가로사진으로 사용할 때는 높이 값은 안 줘도 됨 */
+            height: 100%;
+        }
+
+        .one-wrap1 { 
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .three-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .three-wrap img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .three-wrap div {
+            flex-basis: 24%;
+            color: #000 !important;
+        }
+
+        .three-wrap div .img-box {
+            overflow: hidden;
+        }
+
+        .three-wrap div img:hover {
+            transform: scale(1.3);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .three-wrap div img {
+            width: 100%;
+            height: 450px;
+            transition: 0.3s;
+        }
+
+        .three-title h2 {
+            margin-bottom: 20px;
+            font-size: 50px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+       
+        /* footer */
+        footer {
+            background-color: #060018;
+            padding: 30px 0;
+            border-top: 1px solid #fff;
+        }
+
+        footer p {
+            text-align: center;
+            color: #fff;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="header-top-size">
+                <div class="header-top-wrap">
+                    <div class="logo">
+                        <h1>LOGO</h1>
+                    </div>
+                    <div class="nav">
+                        <ul>
+                            <li>
+                                <a href="">Home</a>
+                            </li>
+                            <li>
+                                <a href="">About</a>
+                            </li>
+                            <li>
+                                <a href="">Blog</a>
+                            </li>
+                            <li>
+                                <a href="">Contact</a>
+                            </li>
+                            <li>
+                                <a href="" class="active">Get Your Ticket</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-screen">
+                <div class="header-size">
+                    <div class="header-content">
+                        <h5>Comitted To Success</h5>
+                        <h1>Digiter Conference<br />For Designers</h1>
+                        <div class="btn-wrap">
+                            <button>DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="one-size">
+                <article class="one-wrap">
+                    <div class="one-left">
+                        <h1>The Biggest Digital<br />Conference.</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deleniti aliquid ratione sequi a magni dolor commodi iste tempora. Maxime sed consequatur laboriosam itaque quod, velit dolor expedita praesentium impedit.
+                        <br /><br /><br />
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores cum iste modi praesentium, numquam quod!
+                        </p>
+                        <div class="one-left-icons">
+                            <div class="when">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <div class="where">
+                                <i class="fa-solid fa-person-dots-from-line"></i>
+                            </div>
+                        </div> 
+                        
+                        <div class="one-left-btn">
+                            <button>Get Your Ticket</button>
+                        </div>
+                    </div>
+                    <div class="one-right">
+                        <div class="one-right-img">
+                            <img src="images/q2.jpg" alt="본문 1번 사진">
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+        </section>
+        <section>
+            <div class="one-size">
+                <article class="one-wrap">
+                    <div class="one-left">
+                        <h1 class="clrs">The Most Importent<br />Speakers.</h1>
+                        <p class="clrs">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore labore ipsa esse unde nostrum in.
+                        </p>
+
+                        <div class="one-left-btn" style="margin-top: 40px;">
+                            <button class="bg-clrs">Get Your Ticket</button>
+                        </div>
+                    </div>
+                    <div class="one-right">
+                        <div class="one-right-img">
+                            <div class="one-two-people">
+                                <div class="one-people">
+                                    <img src="images/q6.jpg" alt="ceo1">
+                                    <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                        <p>JESSCIA BROWN</p>
+                                        <p>Co Founder</p>
+                                    </div>
+                                </div>
+                                <div class="one-people">
+                                    <img src="images/q7.jpg" alt="ceo1">
+                                    <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                        <p>JESSCIA BROWN</p>
+                                        <p>Co Founder</p>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </article>              
+            </div>
+        </section>
+        <section>
+            <div class="three-size">
+                <div class="one-wrap1">
+                    <div class="three-title">
+                        <h2>Event Schedule</h2>
+                    </div>
+
+                    <div class="three-wrap">
+                        <div>
+                            <div class="img-box">
+                                <img src="images/q8.jpg" alt="ceo1">
+                            </div>                        
+                            <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                <p>JESSCIA BROWN</p>
+                                <p>Co Founder</p>
+                            </div>
+                        </div>            
+                
+                        <div>
+                            <div class="img-box">
+                                <img src="images/q9.jpg" alt="ceo1">
+                            </div>     
+                            <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                <p>JESSCIA BROWN</p>
+                                <p>Co Founder</p>
+                            </div>
+                        </div>               
+                
+                        <div>
+                            <div class="img-box">
+                                <img src="images/q10.jpg" alt="ceo1">
+                            </div>     
+                            <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                <p>JESSCIA BROWN</p>
+                                <p>Co Founder</p>
+                            </div>
+                        </div>
+                
+                       <div>
+                        <div class="img-box">
+                            <img src="images/q11.jpg" alt="ceo1">
+                        </div>     
+                            <div class="ceo-title" style="color: #fff; text-align: center; margin-top: 20px;">
+                                <p>JESSCIA BROWN</p>
+                                <p>Co Founder</p>
+                            </div>
+                        
+                        </div>
+                    </div>  
+                </div>  
+            </div>  
+                    
+        </section>
+        <section>4</section>
+    </main>    
+    <footer>
+        <p>
+            Copyright &copy 2023 All rights reserved
+        </p>
+    </footer>
+</body>
+</html>
